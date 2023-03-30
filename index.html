@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="site">
+  <header class="header">
+    <div class="container navbar">
+      <div class="row row-centered">
+        <a href="#" class="brand" title="Sneakers">
+          <img class="brand-logo" src="./images/logo.svg" alt="Sneakers">
+        </a>
+        <button type="button" class="btn btn-menu" aria-expanded="false">
+          <img class="menu-icon menu-open" src="./images/icon-menu.svg" alt="Menu"/>
+          <img class="menu-icon menu-close" src="./images/icon-close.svg" alt="Menu"/>
+        </button>
+        <nav class="navbar-nav">
+          <ul class="menu navbar-menu">
+            <li class="menu-item"><a href="#" class="menu-link" title="Collections">Collections</a></li>
+            <li class="menu-item"><a href="#" class="menu-link" title="Men">Men</a></li>
+            <li class="menu-item"><a href="#" class="menu-link" title="Women">Women</a></li>
+            <li class="menu-item"><a href="#" class="menu-link" title="About">About</a></li>
+            <li class="menu-item"><a href="#" class="menu-link" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="user-cart">
+          <div class="user-cart-wrapper">
+            <button type="button" class="btn btn-cart" title="Cart">
+              <img src="./images/icon-cart.svg" alt="Cart"/>
+            </button>
+            <a href="#" class="user" title="User">
+              <img class="user-avatar" src="./images/image-avatar.png" alt="Avatar">
+            </a>
+          </div>
+        </div>
+        <div class="cart">
+          <div class="cart-header">
+            <h2 class="cart-title">Cart</h2>
+          </div>
+          <div class="cart-content">
+            <p class="cart-empty">Your cart is empty.</p>
+            <button type="button" class="btn btn-primary btn-checkout hidden" title="Checkout">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <div class="row">
+        <article class="product-gallery">
+          <div class="gallery-item-wrapper">
+            <div class="gallery-item active">
+              <img src="./images/image-product-1.jpg" alt="Product">
+            </div>
+            <div class="gallery-item">
+              <img src="./images/image-product-2.jpg" alt="Product">
+            </div>
+            <div class="gallery-item">
+              <img src="./images/image-product-3.jpg" alt="Product">
+            </div>
+            <div class="gallery-item">
+              <img src="./images/image-product-4.jpg" alt="Product">
+            </div>
+            <a href="#" data-arrow="prev" class="gallery-arrow prev">
+              <img class="arrow-prev" src="./images/icon-previous.svg" aria-hidden="true" alt="">
+            </a>
+            <a href="#" data-arrow="next" class="gallery-arrow next">
+              <img class="arrow-next" src="./images/icon-next.svg" aria-hidden="true" alt="">
+            </a>
+          </div>
+          <div class="gallery-nav">
+            <a href="#" data-item-index="0" class="gallery-nav-thumb active">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" data-item-index="1" class="gallery-nav-thumb">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" data-item-index="2" class="gallery-nav-thumb">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" data-item-index="3" class="gallery-nav-thumb">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" aria-hidden="true">
+            </a>
+          </div>
+        </article>
+        <article class="product-details">
+          <div class="container">
+            <h2 class="product-company">Sneaker Company</h2>
+            <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+            <p class="product-desc">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="product-price">
+              <span class="price">$125.00</span>
+              <span class="badge">50%</span>
+              <span class="old-price">$250.00</span>
+            </div>
+            <form class="product-form" method="post" action="#">
+              <input type="hidden" name="product_name" value="Fall Limited Edition Sneakers"/>
+              <input type="hidden" name="product_price" value="125.00"/>
+              <input type="hidden" name="product_thumb" value="./images/image-product-1-thumbnail.jpg"/>
+              <div class="form-group">
+                <div class="input-minus">
+                  <img src="./images/icon-minus.svg" alt="Remove item">
+                </div>
+                <input class="form-field" type="number" name="product_quantity" step="1" min="0" max="20" value="0">
+                <div class="input-plus">
+                  <img src="./images/icon-plus.svg" alt="Add item">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <img class="btn-icon" src="./images/btn-cart.svg" alt="Cart" />
+                <span class="btn-label">Add to cart</span>
+              </button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
