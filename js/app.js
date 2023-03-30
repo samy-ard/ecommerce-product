@@ -82,6 +82,7 @@
 			$(this).parent().remove();
 			$('.cart-empty').removeClass('hidden');
 			$('.btn-checkout').addClass('hidden');
+			$('.cart-badge').remove();
 		});
 
 		var index = -2;
